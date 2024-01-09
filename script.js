@@ -13,6 +13,7 @@ btn.addEventListener(
     let ageDifference = Date.now() - ageObj;
     ageDate = new Date(ageDifference);
 
+    // There is a problem with the age calculations
     let yearsOfAge = ageDate.getUTCFullYear() - 1970;
     let monthsOfAge = ageDate.getUTCMonth();
     let daysOfAge = ageDate.getUTCDay() - 1;
