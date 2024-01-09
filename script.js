@@ -19,9 +19,6 @@ btn.addEventListener(
     ageOutputs[0].textContent = yearsOfAge;
     ageOutputs[1].textContent = monthsOfAge;
     ageOutputs[2].textContent = daysOfAge;
-    // }
-    //  else {
-    //   alert("Error! Your date seems incorrect");
-    // }
+   
   })
 );
