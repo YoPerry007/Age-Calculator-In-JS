@@ -22,4 +22,4 @@ btn.addEventListener(
     ageOutputs[2].textContent = daysOfAge;
    
   })
-);
+)
