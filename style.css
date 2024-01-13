@@ -20,55 +20,79 @@ body {
   background-color: #fff;
   margin-bottom: 3rem;
 }
+input {
+  touch-action: manipulation;
+  max-width: 100%;
+}
 
 .input-entries {
   display: flex;
   padding-block-end: 1.5rem;
   font-weight: bold;
   color: #484747ab;
-
-  & > * {
-    margin-inline: 0.4rem;
-    max-width: 4.7rem;
-  }
-  & small {
-    font-size: 65%;
-    letter-spacing: 1px;
-  }
-  & input {
-    border: 1px solid #8f8b8b45;
-    border-radius: 0.3rem;
-    padding: 0.4rem;
-  }
-  & input:placeholder-shown,
-  input:not(:placeholder-shown) {
-    font-weight: bolder;
-    padding-inline: 0.5rem;
-  }
+}
+.input-entries > * {
+  margin-inline: 0.4rem;
+  max-width: 4.7rem;
+}
+small {
+  font-size: 65%;
+  letter-spacing: 1px;
+}
+input {
+  border: 1px solid #8f8b8b45;
+  border-radius: 0.3rem;
+  padding: 0.4rem;
+}
+input:placeholder-shown,
+input:not(:placeholder-shown) {
+  font-weight: bolder;
+  padding-inline: 0.5rem;
 }
 .separator {
   position: relative;
   margin-block: 0.5rem 1.5rem;
-
-  & .separator-img {
-    background-color: cadetblue;
-    background-image: url(./img/favicon-32x32.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 50%;
-    height: 2.5rem;
-    aspect-ratio: 1;
-    position: absolute;
-    right: 0;
-    top: -1.2rem;
-    border: none;
-    cursor: pointer;
-    transition: all 300ms linear;
-  }
-  & .separator-img:hover {
-    scale: 1.15;
-    background-color: #044660;
-  }
+}
+.separator-img {
+  background-color: cadetblue;
+  background-image: url(./img/favicon-32x32.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  height: 2.5rem;
+  aspect-ratio: 1;
+  position: absolute;
+  right: 0;
+  top: -1.2rem;
+  border: none;
+  cursor: pointer;
+  transition: all 300ms linear;
+}
+.separator-img:hover {
+  scale: 1.15;
+  background-color: #044660;
+}
+.separator small {
+  display: none;
+  position: absolute;
+  right: -1.5rem;
+  top: 1.2rem;
+  background-color: black;
+  color: white;
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+  margin-top: 0.5rem;
+}
+.separator small::after {
+  content: "";
+  display: flex;
+  position: absolute;
+  height: 10px;
+  aspect-ratio: 1;
+  background: black;
+  top: -0.2rem;
+  left: 50%;
+  transform: rotate(50deg);
 }
 .entry > * {
   display: block;
@@ -79,30 +103,33 @@ hr {
 
 .age h1 {
   font-style: italic;
-
-  & span {
-    color: cadetblue;
-  }
+}
+.age h1 span {
+  color: cadetblue;
 }
 
 @media (max-width: 370px) {
   .separator {
     position: relative;
-
-    & .separator-img {
-      right: 50%;
-      transform: translateX(50%);
-    }
+    margin-bottom: 3.5rem;
+  }
+  .separator-img,
+  .separator small {
+    right: 50%;
+    transform: translateX(50%);
+  }
+  .separator small::after {
+    transform: translateX(-40%) rotate(50deg);
   }
 }
 
 footer {
   height: 3.5rem;
-  background-color: #333;
+  background-color: cadetblue;
   width: 100%;
   display: grid;
   place-items: center;
-  color: whitesmoke;
+  color: rgb(8, 61, 87);
   position: fixed;
   bottom: 0;
 }
