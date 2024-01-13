@@ -60,8 +60,26 @@ function handleSubmit(e) {
     ageOutputs[0].innerHTML = y;
   }
 }
+inputs[0].addEventListener("input", () => {
+  inputs[0].value = inputs[0].value.slice(0, 2);
+});
+inputs[1].addEventListener("input", () => {
+  inputs[1].value = inputs[1].value.slice(0, 2);
+});
+inputs[2].addEventListener("input", () => {
+  inputs[2].value = inputs[2].value.slice(0, 4);
+});
 
 btn.addEventListener("click", handleSubmit);
+
+const hideText = document.querySelector(".hide-text");
+
+setInterval(() => {
+  hideText.style.display = "flex";
+}, 5000);
+setInterval(() => {
+  hideText.style.display = "none";
+}, 10000);
 
 // (calculateAge = () => {
 //   // if (isValid) {
