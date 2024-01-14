@@ -81,22 +81,3 @@ setInterval(() => {
 setInterval(() => {
   hideText.style.display = "none";
 }, 10000);
-
-// (calculateAge = () => {
-//   // if (isValid) {
-//   let actualAge = `${inputs[1].value}/${inputs[0].value}/${inputs[2].value}`;
-//   let ageObj = new Date(actualAge);
-//   let ageDifference = Date.now() - ageObj;
-//   ageDate = new Date(ageDifference);
-
-//   let yearsOfAge = ageDate.getUTCFullYear() - 1970;
-//   let monthsOfAge = ageDate.getUTCMonth();
-//   let daysOfAge = ageDate.getUTCDay() - 1;
-//   ageOutputs[0].textContent = yearsOfAge;
-//   ageOutputs[1].textContent = monthsOfAge;
-//   ageOutputs[2].textContent = daysOfAge;
-//   // }
-//   //  else {
-//   //   alert("Error! Your date seems incorrect");
-//   // }
-// })
