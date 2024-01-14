@@ -10,6 +10,7 @@ let year = date.getFullYear();
 
 const months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
+
 const validate = () => {
   const checkInputs = document.querySelectorAll("input");
   let validator = true;
